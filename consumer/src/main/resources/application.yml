@@ -1,0 +1,20 @@
+server:
+  port: 8002
+dubbo:
+  # 配置服务信息
+  application:
+    name: service-cons
+    # 禁用QOS同一台机器可能会有端口冲突现象
+    qos-enable: false
+    qos-accept-foreign-ip: false
+  # 配置注册中心
+  registry:
+    address: nacos://localhost:8848
+  # 设置超时时间
+  consumer:
+    timeout: 4000
+spring:
+  application:
+    name: service-cons
+
+
